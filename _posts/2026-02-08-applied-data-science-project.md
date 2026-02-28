@@ -8,12 +8,12 @@ categories: ITD214
 ## Project Background
 Provide an overview of your team's project business goals and objectives and state the objective that you are working on. 
 
-<i><b>Business Objective</i></b>: Group2 Global Enterprise is planning to set up a hotel in Portugal. Apart from internal resource management, hotels also experience wastage of resources due to external factors in the form of guest behaviour such as booking cancellation or mismatch in guest expectations & preferences. 
+<i><b>Business Objective</b>: Group2 Global Enterprise is planning to set up a hotel in Portugal. Apart from internal resource management, hotels also experience wastage of resources due to external factors in the form of guest behaviour such as booking cancellation or mismatch in guest expectations & preferences. 
 As the hotel will be based in Portugal, guests will likely be tourists from Europe.
 
 
 
-<i><b>Objectives</i></b>:
+<i><b>Objectives</b>:
 1. To predict whether customers will cancel their bookings & factors affecting it.
 2. Identify key themes in hotel reviews to prioritise operations and guide establishment of the new hotel (Text Analysis).
 
