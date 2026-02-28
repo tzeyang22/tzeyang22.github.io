@@ -1,7 +1,6 @@
 ---
 layout: post
 author: Leo Tze Yang
-ID: 8248527U
 title: "Applied Data Science Project Documentation"
 categories: ITD214
 ---
