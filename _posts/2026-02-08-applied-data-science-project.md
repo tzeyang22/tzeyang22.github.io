@@ -5,8 +5,7 @@ title: "Applied Data Science Project Documentation"
 categories: ITD214
 ---
 ## Project Background
-<i><b>Business Objective</b></i>: Group2 Global Enterprise is planning to set up a hotel in Portugal. Apart from internal resource management, hotels also experience wastage of resources due to external factors in the form of guest behaviour such as booking cancellation or mismatch in guest expectations & preferences. 
-As the hotel will be based in Portugal, guests will likely be tourists from Europe.
+<i><b>Business Objective</b></i>: Support the establishment of the hotel by lowering the wastage of resources which could otherwise arise from allocating resources into factors that are not as important. 
 
 <i><b>Objectives</b></i>:
 1. To predict whether customers will cancel their bookings & factors affecting it.
@@ -27,10 +26,14 @@ Document your work done to accomplish the outcome
 
 ### Modelling
 <p>I split 80% of data for training 20% of data for testing.</p> 
-<p>The data is almost ready for modelling except the target variables are not balance. The training 'non-cancelled' class has 60,000 records while training 'cancelled' has only 35,000 records. This will create bias result for my modelling. I use Synthetic Minority Oversampling Technique (SMOTE) to oversample minority class ('cancelled') using k-nearest neighbour. The reason for choosing oversampling instead of undersampling is because I want to preserve the quantity of data. If I use undesampling technique, 25000 rows of data will be lost. This is quite a large amount of data lost.</p>
+<p>The data is almost ready for modelling except the target variables are not balance. The training 'non-cancelled' class has 60,000 records while training 'cancelled' has only 35,000 records. This will create bias result for my modelling. I use Synthetic Minority Oversampling Technique (SMOTE) to oversample minority class ('cancelled') using k-nearest neighbour. The reason for choosing oversampling instead of undersampling is because I want to preserve the quantity of data. If I use undersampling technique, 25000 rows of data will be lost. This is quite a large amount of data lost.</p>
+<p>Since the objective is find the reason affecting cancellation, I will use white box model for my prediction. The 3 models chosen are Logistic Regression, Decision Tree and Grdient Boosting. Althought Gradient Boosting is not a white box model, we can use technique to see the important features.</p>
 
 ### Evaluation
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit. Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.
+<p>Even though we are interested in knowing the factors that affect cancellation, we are using the model to predict which customer will cancel and which customer will not cancel. Thus, True positive and true negative is important. I will use accuracy as my model assessment criteria.</p>
+<p>After adjusting the hyperparameter of the 3 models, Decision Tree has the highest accuracy of 0.811. Although True Positive is the lowest among the 3 models, Decision Tree has the highest True negative. This mean that the model perform better in predicting non-cancelling.</p>
+<p>There is dillema of parameter tunnning for modelling. Take example, a more complex tree (increase the level and leaf node) in Decision Tree help lower bias and capture complex pattern. Accuracy increased but this complexity also increase variance. This mean that the model is more sentive to small variance or noise in the training data and not able generalize well. Overfitting may occur. Thus, I adjust the Decision Tree to a level where accuracy increase but there is little or no overfitting.</p>
+<p>Decision Tree cover the objective of predicting whether customer cancel or not cancel. From the model (since it is a white box model), we can also learn the factors affecting cancellation. Since we know the factors affecting cancellation, we just need to focus on those factors to prevent cancellation. This save resource and time on allcating manpower or reduce unnecessary budget in hiring third-party company to investigate the cause (our business objective of lowering wastag of resource).</p>
 
 ## Recommendation and Analysis
 Explain the analysis and recommendations
