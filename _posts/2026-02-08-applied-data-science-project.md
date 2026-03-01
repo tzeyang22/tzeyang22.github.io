@@ -44,7 +44,7 @@ Explain the analysis and recommendations
 
 ## AI Ethics
 Discuss the potential data science ethics issues (privacy, fairness, accuracy, accountability, transparency) in your project. 
-<p>My data come from open source from kaggle. Any third-party can assess the data inputs and provide assurance that the outputs can be trusted. This increase the auditabiliy of my dataset and model. Furthermore, all personally identifying information have been removed from the data as indicated in the site https://www.kaggle.com/datasets/jessemostipak/hotel-booking-demand </p>
+<p>My data come from open source from kaggle. Any third-party can assess the data inputs and provide assurance that the outputs can be trusted. This increase the auditabiliy of my dataset and model. Furthermore, all personally identifying information have been removed from the data as indicated in the site <a href="https://www.kaggle.com/datasets/jessemostipak/hotel-booking-demand" target="_blank">kaggle</a></p>
 
 
 ## Source Codes and Datasets
