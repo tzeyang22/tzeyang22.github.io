@@ -51,4 +51,4 @@ Discuss the potential data science ethics issues (privacy, fairness, accuracy, a
 
 
 ## Source Codes and Datasets
-Upload your model files and dataset into a GitHub repo and add the link [here](https://github.com/tzeyang22/ITD214_project). 
+Upload your model files and dataset into a GitHub repo and click the link [here](https://github.com/tzeyang22/ITD214_project) to access the files.
